@@ -10,33 +10,55 @@ body
   .hero {
     flex-direction: column;
     height: auto;
+    padding: 2rem 1rem;
   }
 
   .content, .image {
     width: 100%;
-    padding: 1.5rem;
     text-align: center;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
   }
 
   .name {
     margin-left: 0;
     text-indent: 0;
+    font-size: 2.5rem;
   }
 
   .subtitle {
     text-indent: 0;
+    font-size: 1rem;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .image img {
-    height: auto;
     max-width: 80%;
+    height: auto;
+  }
+
+  .image::before {
+    display: none; /* supprime l’ellipse sur petit écran pour éviter les débordements */
   }
 }
 
+
 .hero
 {
-	display: flex;
+ 	display: flex;
+ 	align-items: center;
+	justify-content: space-between;
 	height: 100vh;
+	overflow: hidden;
+	flex-wrap: nowrap;
 }
 
 .background
@@ -107,7 +129,8 @@ h1
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 3rem;
+	padding: 2rem;
+	box-sizing: border-box;
 }
 
 .image
@@ -116,8 +139,9 @@ h1
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
+	overflow: visible;
 	position: relative;
+	
 }
 
 .image::before
@@ -134,35 +158,52 @@ h1
 
 .image img
 {
-	height: 70vh;
+	max-height: 70vh;
 	width: auto;
+	height: auto;
 	object-fit: cover;
 	backdrop-filter: brightness(150%);
 	z-index: 1;
 }
 
-.linkedin
+.links
 {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
-	gap: 0.5rem;
+	gap: 2rem;
 	text-decoration: none;
 	margin-top: 1rem;
 	color: #00a0dc;
 	font-weight: 500;
 	font-size: 1.1rem;
 	transition: color 0.2s ease;
+	align-items: center;
 }
 
-.linkedin:hover
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #00bfff;
+}
+
+.links:hover
 {
 	color: #0077b5;
 }
 
-.linkedin-icon
+.icon
 {
-	width: 48px;
-	height: 48px;
+	width: 35px;
+	height: 35px;
+}
+
+.cv-icon {
+	width: 25px;
+	height: 25px;
+	filter: invert(1) brightness(1.5);
+	/* rend les SVG noirs visibles sur fond noir */
 }
 
 .formations-section
@@ -343,6 +384,7 @@ h2 {
 	/* rend les SVG noirs visibles sur fond noir */
 	transition: transform 0.2s;
 }
+
 
 .card-lang
 {
