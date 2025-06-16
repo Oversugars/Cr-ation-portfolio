@@ -38,13 +38,13 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 1rem !important;
-}
+	}
 
-.links a {
-	flex: 1 1 120px;
-	max-width: 200px;
-	text-align: center;
-}
+	.links a {
+		flex: 1 1 120px;
+		max-width: 200px;
+		text-align: center;
+	}
 
 	.links img {
  		max-width: 25px;
