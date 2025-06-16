@@ -46,7 +46,7 @@ body
   }
 
   .image::before {
-    display: none; /* supprime l’ellipse sur petit écran pour éviter les débordements */
+    display: none;
   }
 }
 
@@ -170,7 +170,7 @@ h1
 {
 	display: flex;
 	align-items: center;
-	gap: 2rem;
+	gap: 7rem;
 	text-decoration: none;
 	margin-top: 1rem;
 	color: #00a0dc;
