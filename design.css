@@ -378,12 +378,19 @@ h2 {
 }
 
 .description {
-	color: white !important;
+	color: white;
 	padding: 20px;
 	background-color: rgba(0, 255, 128, 0.18);
+	box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
 	border-radius: 5px;
 	text-align: justify;
 	margin-bottom: 30px;
+	transition: transform 0.3s;
+	backdrop-filter: blur(4px);
+}
+
+.description:hover {
+	transform: translateY(-5px);
 }
 
 .projets-container {
